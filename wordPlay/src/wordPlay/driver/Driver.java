@@ -11,7 +11,6 @@ import wordPlay.util.FileProcessor;
 public class Driver {
 	public static void main(String[] args) throws IOException {
 		
-		String w =  new String();
 
 		/*
 		 * As the build.xml specifies the arguments as input,output or metrics, in case the
@@ -23,8 +22,19 @@ public class Driver {
 			System.exit(0);
 		}
 		System.out.println("Hello World! Lets get started with the assignment");
+		
+		/* Create FileProcessor  object to access FileProcessor java code
+		 * Using the path to the input file
+		 *  */ 
+		
 		FileProcessor fp = new FileProcessor("/Users/sadhanadesai/csx42-summer-2020-assign1-sadhanadesai/wordPlay/src/wordPlay/util/input.txt");
-		//System.out.println(fp.poll());
+		
+		/* Fetching input file contents 
+		 * using FileProcessor object to call the method
+		 * and to check if reached end of file
+		 * print the words using poll method defined in FileProcessor
+		 *  */	
+		
 		while(fp.getallwords()!= null) {
         	System.out.println(fp.poll());
         }

@@ -65,6 +65,12 @@ public final class FileProcessor {
 		return words.remove();
 	}
 	
+	/* Method to get all the words from the input file 
+	 * Here peek method takes the head of the string
+	 * @return String the words read from the input file
+	 * @exception IOException On error encountered when reading from input file. 
+	 * */
+	
 	public String getallwords() throws IOException{
 		return words.peek();
 	}
