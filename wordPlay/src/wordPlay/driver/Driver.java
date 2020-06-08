@@ -9,6 +9,13 @@ import wordPlay.util.FileProcessor;
  *
  */
 public class Driver {
+	
+	/**
+	 * This is the main method in which input file is read line by line, rotate 
+	 * and metrics are getting calculated and are displayed in metrics.txt file
+	 * 
+	 */
+	
 	public static void main(String[] args) throws IOException {
 		
 
