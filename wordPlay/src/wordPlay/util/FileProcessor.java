@@ -61,6 +61,11 @@ public final class FileProcessor {
 			if (null == nextLine) return null;
 			words.addAll(Arrays.asList(nextLine.split("\\s+")));
 		}
+		
 		return words.remove();
+	}
+	
+	public String getallwords() throws IOException{
+		return words.peek();
 	}
 }

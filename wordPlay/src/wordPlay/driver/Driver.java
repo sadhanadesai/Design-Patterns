@@ -1,11 +1,17 @@
 package wordPlay.driver;
 
+import java.io.IOException;
+
+import wordPlay.util.FileProcessor;
+
 /**
  * @author John Doe
  *
  */
 public class Driver {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		
+		String w =  new String();
 
 		/*
 		 * As the build.xml specifies the arguments as input,output or metrics, in case the
@@ -17,6 +23,10 @@ public class Driver {
 			System.exit(0);
 		}
 		System.out.println("Hello World! Lets get started with the assignment");
-
+		FileProcessor fp = new FileProcessor("/Users/sadhanadesai/csx42-summer-2020-assign1-sadhanadesai/wordPlay/src/wordPlay/util/input.txt");
+		//System.out.println(fp.poll());
+		while(fp.getallwords()!= null) {
+        	System.out.println(fp.poll());
+        }
 	}
 }
