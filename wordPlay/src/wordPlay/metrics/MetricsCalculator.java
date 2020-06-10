@@ -1,34 +1,16 @@
 package wordPlay.metrics;
 
-import java.util.Scanner;
 
 public class MetricsCalculator{
+	public static float result = 0;
 	
-	public static void main(String[] args) {
+	public static float avg_words(int word_counter,int sentCount) {
+		result = (float) word_counter/sentCount;
+		return result;		
+	}
 
-	   Scanner sc = new Scanner(System.in);
-	
-	String words = sc.nextLine();
-
-    int count = 0;
-    double sum = 0;
-    double average = 0;
-
-    sc = new Scanner(words);
-
-    while (sc.hasNext()) {
-
-        String userInput = sc.next();
-
-        double charNum = userInput.length();
-        sum = charNum + sum;
-        count++;
-
-        if (count > 0) {
-            average = sum / count;
-        }
+	public static float word_length(int word_counter, int charCount) {
+		result = (float) charCount/word_counter;
+		return result;
     }
-    System.out.println("Average word length = " + average);
-}
-	
 }
