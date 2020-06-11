@@ -8,13 +8,13 @@ import java.io.IOException;
 
 public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 	
-	FileWriter outputFile;
+	FileWriter newFile;
     File file;
 	public Results(String fileName) {
         file = new File(fileName);
         try {
-            outputFile = new FileWriter(file);
-        } catch (IOException e) {
+            newFile = new FileWriter(file);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -47,7 +47,7 @@ public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 	public void writeToFile(String text) {
 		// TODO Auto-generated method stub
 		try {
-            outputFile.write(text + " ");
+            newFile.write(text + " ");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,7 +57,7 @@ public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 	public void writeNextLineToFile() {
 		// TODO Auto-generated method stub
 		try {
-            outputFile.write("\n");
+            newFile.write("\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,7 +66,7 @@ public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 
 	public void fc() {
 		try {
-			outputFile.close();
+			newFile.close();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
